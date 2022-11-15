@@ -7,12 +7,12 @@ env:
 
 install:
   - docker-compose -f docker-compose-build.yaml build
-  - docker tag udagram-frontend:local nguyentu13/udagram-frontend:v2
-  - docker tag udagram-api-feed:latest nguyentu13/udagram-api-feed:v2
-  - docker tag udagram-api-user:latest nguyentu13/udagram-api-user:v2
-  - docker tag reverseproxy:latest nguyentu13/reverseproxy:v2
+  - docker tag udagram-frontend:local nguyentu13/udagram-frontend:v1
+  - docker tag udagram-api-feed:latest nguyentu13/udagram-api-feed:v1
+  - docker tag udagram-api-user:latest nguyentu13/udagram-api-user:v1
+  - docker tag reverseproxy:latest nguyentu13/reverseproxy:v1
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USER" --password-stdin    
-  - docker push nguyentu13/reverseproxy:v2
-  - docker push nguyentu13/udagram-api-user:v2
-  - docker push nguyentu13/udagram-api-feed:v2
-  - docker push nguyentu13/udagram-frontend:v2   
+  - docker push nguyentu13/reverseproxy:v1
+  - docker push nguyentu13/udagram-api-user:v1
+  - docker push nguyentu13/udagram-api-feed:v1
+  - docker push nguyentu13/udagram-frontend:v1   
